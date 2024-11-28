@@ -1,5 +1,3 @@
-function TrocarPagina(){
-    if(document.getElementById){
-        
-    }
-}
+const BotaoPagina = document.getElementsByTagName()
+
+addEventListener

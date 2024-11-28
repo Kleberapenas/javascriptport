@@ -6,6 +6,20 @@
     <title>Ano Bissexto</title>
 </head>
 <body>
-    
+    <h1>Calculador de Ano Bissexto</h1>
+    <input type="number" id="Ano" placeholder="Insira um ano qualquer">
+    <button onclick="EnviarResposta()">Enviar</button>
+    <p id="Resultado"></p>
+    <script>
+        function EnviarResposta(){
+            let AnoIndicado = document.getElementById("Ano").value;
+            let Resposta = document.getElementById("Resultado")
+            if(AnoIndicado%4==0 && AnoIndicado%100==0 && AnoIndicado%400==0 || AnoIndicado%4==0 && AnoIndicado%100!=0){
+                Resposta.innerText = "O ano é bissexto";
+            } else {
+                Resposta.innerText = "O ano não é bissexto";
+            }
+        }
+    </script>
 </body>
 </html>
