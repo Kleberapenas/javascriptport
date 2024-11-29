@@ -1,5 +1,7 @@
 body {
-    background-color: mediumaquamarine;
+    background-image: linear-gradient(mediumaquamarine,mediumseagreen);
+    background-size: cover;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
