@@ -39,6 +39,7 @@ button {
 button:hover {
     width: 300px;
     height: fit-content;
+    color: aliceblue;
     border-color: aliceblue;
     background-color: black;
 }
@@ -76,4 +77,16 @@ button:hover a{
     font-size: 6em;
     bottom: 1svh;
     left: 45svh;
+}
+
+#CampoSenhaWrapper {
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 30px;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
