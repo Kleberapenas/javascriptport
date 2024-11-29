@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/style.css">
     <title>Calculadora Média</title>
 </head>
 <body>
+    <a class="Retornar" href="index.html"><img src="resources/imagem/seta.png" alt="Voltar"></a>
     <h1>Calculadora de Media Escolar</h1>
-    <input type="number" placeholder="Insira uma nota de 1 a 10" id="Nota">
-    <button onclick="CalcularMedia()"></button>
+    <input type="number" placeholder="Insira uma nota de 1 a 10" class="Nota">
+    <input type="number" placeholder="Insira uma nota de 1 a 10" class="Nota">
+    <input type="number" placeholder="Insira uma nota de 1 a 10" class="Nota">
+    <button onclick="CalcularMedia()">Calcular Média</button>
     <p id="Resultado"></p>
     <script>
+        const Resposta = document.getElementById("Resultado")
         function CalcularMedia(){
-            let i = 0
-            if(i>3){
-                
-            }
+            const Nota1 = document.getElementsByClassName("Nota")[0].value
+            const Nota2 = document.getElementsByClassName("Nota")[1].value
+            const Nota3 = document.getElementsByClassName("Nota")[2].value
+            const Media = (Nota1+Nota2+Nota3)/3
+            Resposta.innerText = `Sua média final é de ${Media}` 
         }
     </script>
 </body>

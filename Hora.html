@@ -6,10 +6,20 @@
     <title>Mensagem de bom dia</title>
 </head>
 <body>
-
+    <a class="Retornar" href="index.html"><img src="resources/imagem/seta.png" alt="Voltar"></a>
+    <h1>Horas</h1>
+    <p id="Resultado"></p>
     <script>
-        const data = new Date()
+        const date = new Date()
         const hour = date.getHours()
+        const Resposta = document.getElementById("Resultado")
+        if(hour<13){
+            Resposta.innerText = "Bom dia!"
+        } else if(hour<17) {
+            Resposta.innerText = "Boa tarde!"
+        } else {
+            Resposta.innerText = "Boa noite!"
+        }
     </script>
 </body>
 </html>

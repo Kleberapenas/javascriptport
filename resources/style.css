@@ -3,10 +3,75 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-size:5em;
 }
 
 #buttons {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     row-gap: 10px;
+}
+
+img {
+    position: absolute;
+    height: 50px;
+    top: 10px;
+    left: 10px;
+}
+
+button {
+    height: fit-content;
+    width: 200px;
+    border-radius: 20px;
+    border: 1px black solid;
+    background-color: aliceblue;
+    transition: 1s;
+}
+
+button:hover {
+    width: 300px;
+    height: fit-content;
+    border-color: aliceblue;
+    background-color: black;
+}
+
+button a {
+    text-decoration: none;
+    text-align: justify;
+    color: black;
+    font-size: 2em;
+    transition: 1s;
+}
+
+button:hover a{
+    color: aliceblue;
+    font-size: 3em;
+}
+
+#Adivinhacao {
+    background-image: url(imagem/saruman.webp);
+    background-size: cover;
+    position: relative;
+    height: 90svh;
+    width: 90svw;
+}
+
+#Adivinhacao h1{
+    font-size: 3em;
+    width: 60svw;
+    color: white;
+}
+
+#Adivinhacao p{
+    color: white;
+    position: absolute;
+    font-size: 6em;
+    bottom: 1svh;
+    left: 45svh;
 }

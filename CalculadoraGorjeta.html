@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora Gorjeta</title>
 </head>
-<body>
-    
+<body id="Gorjeta">
+    <a class="Retornar" href="index.html"><img src="resources/imagem/seta.png" alt="Voltar"></a>
+    <input id="valor" type="number" placeholder="Qual o valor total da compra?">
+    <input id="satisfacao" type="text" placeholder="Qual foi seu nivel de satisfação(bom, ótimo, excelente)">
+    <button onclick="CalcularGorjeta()"></button>
+    <p id="resultado"></p>
+    <script>
+        function CalcularGorjeta(){
+            const Satisfacao = document.getElementById('Satisfacao').value
+            const Valor = document.getElementById('valor').value
+            const Resultado = document.getElementById('resultado')
+
+            if(Satisfacao=="bom"){
+                Resultado.innerText = `O valor total foi de ${Valor} devido ao nosso atendimento com a gorjeta o total é de ${Valor+(Valor*0.10)}`
+            } else if(Satisfacao=="ótimo"){
+                Resultado.innerText = `O valor total foi de ${Valor} devido ao nosso atendimento com a gorjeta o total é de ${Valor+(Valor*0.15)}`
+            } else if(Satisfacao=="excelente") {
+                Resultado.innerText = `O valor total foi de ${Valor} devido ao nosso atendimento com a gorjeta o total é de ${Valor+(Valor*0.15)}`
+            } else {
+                Resultado.innerText = `O valor total foi de ${Valor}.`
+            }
+        }
+    </script>
 </body>
 </html>
