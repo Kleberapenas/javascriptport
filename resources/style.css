@@ -32,7 +32,7 @@ button {
     width: 200px;
     border-radius: 20px;
     border: 1px black solid;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     transition: 1s;
 }
 

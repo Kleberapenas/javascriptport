@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resources/style.css">
+        <title>Senha</title>
+    </head>
+    <body>
+        <a class="Retornar" href="index.html"><img src="resources/imagem/seta.png" alt="Voltar"></a>
+        <div id="CampoSenhaWrapper">
+            <p>Insira Sua senha</p>
+            <input id="AreaSenha" type="password" placeholder="Insira sua senha">
+            <button onclick="ChecarSenha()">Confirmar</button>
+        </div>
+        <script>
+            const SenhaVerd = "JavascriptCozinhaMeusMiolos"
+            function ChecarSenha(){
+                const Senha = document.getElementById("AreaSenha").value
+                if(Senha==SenhaVerd){
+                    document.getElementById("AreaSenha").placeholder = "Senha Invalida"
+                    document.getElementById("AreaSenha").style.backgroundColor = 'blue'
+                } else {
+                    document.getElementById("AreaSenha").placeholder = "Senha valida"
+                    document.getElementById("AreaSenha").style.backgroundColor = 'green'
+
+                }
+            }
+        </script>
+    </body>
+</html>
