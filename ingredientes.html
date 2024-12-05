@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/style.css">
+    <title>Lista de ingredientes</title>
+</head>
+<body>
+    <h1>Escolha 3 alimentos</h1>
+    <div id="lista_alimentos">
+        <label for="potato"><input type="checkbox" value="Batata">Batata</label>
+        <label for="carne"><input type="checkbox" value="Carne">Carne</label>
+        <label for="tomate"><input type="checkbox" value="Tomate">Tomate</label>
+        <label for="carrot"><input type="checkbox" value="Cenoura">Cenoura</label>
+        <label for="bellpepper"><input type="checkbox" value="Pimentão">Pimentão</label>
+        <label for="lettuce"><input type="checkbox" value="Alface">Alface</label>
+    </div>
+    <button id="botao_resposta">Mostrar lista</button>
+    <p class="resultado" id="resultado"></p>
+    
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]')
+        const resultDiv = document.getElementById('resultado')
+        const showSelectedBtn = document.getElementById('botao_resposta')
+        
+        showSelectedBtn.addEventListener('click', () => {
+            const selectedIngredients = []
+            function verificarCheckbox(checkbox) {
+        if (checkbox.checked) {
+          selectedIngredients.push(checkbox.value)
+        }
+      }
+
+      checkboxes.forEach(verificarCheckbox)
+
+      if (selectedIngredients.length > 0) {
+        resultDiv.innerText = `Ingredientes selecionados: ${selectedIngredients.join(', ')}`
+      } else {
+        resultDiv.innerText = 'Nenhum ingrediente selecionado.'
+      }
+    })
+    </script>
+</body>
+</html>

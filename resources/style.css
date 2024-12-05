@@ -90,3 +90,13 @@ button:hover a{
     justify-content: center;
     align-items: center;
 }
+
+#alimentos {
+    display: flex;
+}
+
+#alimentos #lista_alimentos {
+    height: 50px;
+    width: fit-content;
+    background-color: #eee;
+  }
